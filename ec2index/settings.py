@@ -27,6 +27,7 @@ SECRET_KEY = '=_-5p463240(@6_bgn7_rbsou7-n@g9&5%nh12v&5(5y0v(kbi'
 DEBUG = False
 
 ALLOWED_HOSTS = ['*']
+#ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -75,13 +76,24 @@ WSGI_APPLICATION = 'ec2index.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
 
+#DATABASES = {
+#    'default': {
+#        'ENGINE': 'django.db.backends.sqlite3',
+#        'NAME': BASE_DIR / 'db.sqlite3',
+#    }
+#}
+
+#Production settings
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'database-1',
+        'USER': 'postgresadmin1',
+        'PASSWORD':'{mp}iwbo94311',
+        'HOST':'database-1.cqufwbkcagv4.ap-south-1.rds.amazonaws.com',
+        'PORT':'5432'
     }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/3.1/ref/settings/#auth-password-validators

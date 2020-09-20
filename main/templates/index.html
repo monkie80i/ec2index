@@ -1,87 +1,65 @@
+{% extends "base.html" %}
 {% load static %}
-<!DOCTYPE html>
-<html>
-<head>
-	<title>Landing Pages</title>
-	<meta charset="utf-8">
-	<meta name="author" content="shahzan sadick">
-	<meta name="viewport" content="width=device-width,initial-scale=1.0">
-	<!-- CSS only -->
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
 
-	<!-- JS, Popper.js, and jQuery -->
-	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
-	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
-	<style type="text/css">
-		.jumbotron {
-			
-		}
-		.card {
-			padding-bottom: 10px;
-			margin-bottom: 20px;
-		}
-		.card img {
-			width: 100%;
-			height: auto;
-		}
+{% block title %}
+Landing Pages
+{%endblock%}
 
-		.card h3 {
-			margin-top: 20px;
-		}
+{% block heading %}
+Landing Pages
+{%endblock%}
 
-		.card h3, .card p,.card a {
-			margin-left: 10px;
-		}
-	</style>
-
-</head>
-<body>
-	<div class="container">
-		<div class="jumbotron">
-			<h1>Landing Pages</h1>
-			<p>By Shahzan Sadick</p>
-		</div>
-		<div class="row">
-				<div class="col-md-4">
-					<div class="card">
-						<a href="https://monkie80i.github.io/purepages/andrea/index.html"><img src="{% static '/img/andrea700px.jpg'%}"></a>
-						<!--<h3>Name</h3>
-						<p>Description</p>
-						<a href="andrea/index.html"><button class="btn btn-primary">view</button></a>-->
-					</div>
-				</div>
-				<div class="col-md-4">
-					<div class="card">
-						<a href="https://monkie80i.github.io/purepages/buri/index.html"><img src="{% static '/img/buri700px.jpg'%}"></a>
-						<!--<h3>Name</h3>
-						<p>Description</p>
-						<a href="buri/index.html"><button class="btn btn-primary">view</button></a>-->
-					</div>
-				</div>
-				<div class="col-md-4">
-					<div class="card">
-						<a href="https://monkie80i.github.io/purepages/foody/contact.html"><img src="{% static '/img/foodie700px.jpg'%}"></a>
-						<!--<h3>Name</h3>
-						<p>Description</p>
-						<a href="foody/contact.html"><button class="btn btn-primary">view</button></a>-->
-					</div>
-				</div>
-				<div class="col-md-4">
-					<div class="card">
-						<a href="https://monkie80i.github.io/purepages/sintec/index.html"><img src="{% static '/img/sintac700px.jpg'%}"></a>
-						<!--<h3>Name</h3>
-						<p>Description</p>
-						<a href="sintec/index.html"><button class="btn btn-primary">view</button></a>-->
-					</div>
-				</div>
-			</div>
-		<div class="row">
-			<div class="alert alert-warning" role="alert">
-			  Note: These pages aren't responsive yet and are built with pure HTML5 and CSS3
-			</div>
-		</div>
+{% block content %}
+<div class="col-md-4">
+	<div class="card">
+		<a href="https://monkie80i.github.io/purepages/andrea/index.html"><img src="{% static '/img/andrea700px.jpg'%}"></a>
+		<h3>Andrea</h3>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+		consequat.</p>
+		<a href="andrea/index.html"><button class="btn btn-primary">view</button></a>
 	</div>
+</div>
+<div class="col-md-4">
+	<div class="card">
+		<a href="https://monkie80i.github.io/purepages/buri/index.html"><img src="{% static '/img/buri700px.jpg'%}"></a>
+		<h3>Buri</h3>
+		<p>ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			consequat.</p>
+		<a href="buri/index.html"><button class="btn btn-primary">view</button></a>
+	</div>
+</div>
+<div class="col-md-4">
+	<div class="card">
+		<a href="https://monkie80i.github.io/purepages/foody/contact.html"><img src="{% static '/img/foodie700px.jpg'%}"></a>
+		<h3>Foody</h3>
+		<p>ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+		consequat.</p>
+		<a href="foody/contact.html"><button class="btn btn-primary">view</button></a>
+	</div>
+</div>
+<div class="col-md-4">
+	<div class="card">
+		<a href="https://monkie80i.github.io/purepages/sintec/index.html"><img src="{% static '/img/sintac700px.jpg'%}"></a>
+		<h3>Sintec</h3>
+		<p>ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+		consequat.</p>
+		<a href="sintec/index.html"><button class="btn btn-primary">view</button></a>
+	</div>
+</div>
+{% endblock %}
 
-</body>
-</html>
+{% block message %}
+<div class="row">
+	<div class="alert alert-warning" role="alert">
+	  Note: These pages aren't responsive yet and are built with pure HTML5 and CSS3
+	</div>
+</div>
+{% endblock %}

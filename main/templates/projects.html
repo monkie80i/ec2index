@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}
+Projects
+{%endblock%}
+
+{% block heading %}
+Projects
+{%endblock%}
+
+{% block content %}
+{% if projects %}
+<table class="table table-striped">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Name</th>
+      <th scope="col">Description</th>
+      <th scope="col">Created</th>
+      <th scope="col">Updated</th>
+    </tr>
+  </thead>
+  <tbody>
+  	{% for project in projects %}
+    <tr>
+      <th scope="row">{{forloop.counter}}</th>
+      <td>{{project.name}}</td>
+      <td>{{project.description}}</td>
+      <td>{{project.created}}</td>
+      <td>{{project.updated}}</td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+{%else%}
+	<div class="alert alert-danger" role="alert">
+		Opps ther are no projects yet!
+	</div>
+{%endif%}
+{% endblock %}
